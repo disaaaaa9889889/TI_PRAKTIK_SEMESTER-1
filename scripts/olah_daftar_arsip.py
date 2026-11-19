@@ -267,7 +267,7 @@ PG_PASSWORD = getpass("Password PostgreSQL: ")
 
 # URL.create menyusun alamat koneksi; aman walau password berisi
 # simbol seperti @ atau #.
-alamat = URL.create("postgresql+psycopg2", username=PG_USER,
+alamat = URL.create("postgresql+psycopg", username=PG_USER,
                     password=PG_PASSWORD, host=PG_HOST,
                     port=PG_PORT, database=PG_DB)
 mesin = create_engine(alamat)
